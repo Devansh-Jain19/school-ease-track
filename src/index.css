@@ -2,41 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Rural Schools Attendance System Design System
+All colors MUST be HSL for consistency and theming.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors - Clean and accessible */
+    --background: 220 15% 97%;
+    --foreground: 220 15% 15%;
 
+    /* Cards and surfaces */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Professional blue for trust */
+    --primary: 205 85% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 205 85% 40%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Complementary green for success */
+    --secondary: 155 65% 45%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Accent - Warm orange for highlights */
+    --accent: 25 85% 55%;
+    --accent-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Muted - Subtle grays */
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 15% 45%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive - Clear red for errors */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders and inputs */
+    --border: 220 15% 88%;
+    --input: 220 15% 92%;
+    --ring: 205 85% 45%;
 
-    --radius: 0.5rem;
+    /* Success states */
+    --success: 155 65% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning states */
+    --warning: 45 85% 55%;
+    --warning-foreground: 220 15% 15%;
+
+    /* Educational theme gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(205 85% 45%), hsl(155 65% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(205 85% 45%), hsl(205 85% 35%));
+    --gradient-accent: linear-gradient(135deg, hsl(25 85% 55%), hsl(45 85% 55%));
+
+    /* Shadows for depth */
+    --shadow-sm: 0 2px 4px hsl(220 15% 15% / 0.1);
+    --shadow-md: 0 4px 12px hsl(220 15% 15% / 0.15);
+    --shadow-lg: 0 8px 24px hsl(220 15% 15% / 0.2);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
