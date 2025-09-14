@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { GraduationCap, Users, Clock, TrendingUp, Brain, CheckCircle } from "lucide-react";
+import { GraduationCap, Users, Clock, TrendingUp, Brain, CheckCircle, BookOpen, Building } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -15,12 +15,18 @@ const Index = () => {
               <GraduationCap className="h-8 w-8 text-primary" />
               <span className="text-2xl font-bold text-foreground">SmartAttend</span>
             </div>
-            <div className="flex items-center space-x-4">
+            <div className="flex flex-wrap items-center gap-2">
               <Link to="/dashboard">
-                <Button variant="outline">Teacher Login</Button>
+                <Button variant="outline" size="sm">Teachers</Button>
               </Link>
               <Link to="/admin">
-                <Button>Admin Login</Button>
+                <Button variant="outline" size="sm">Admin</Button>
+              </Link>
+              <Link to="/student">
+                <Button variant="outline" size="sm">Students</Button>
+              </Link>
+              <Link to="/government">
+                <Button size="sm">Government</Button>
               </Link>
             </div>
           </div>
@@ -40,15 +46,29 @@ const Index = () => {
             Transform manual attendance into a fast, accurate, and reliable digital system. 
             Save time, reduce errors, and improve resource allocation for better education outcomes.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 justify-center max-w-4xl mx-auto">
             <Link to="/dashboard">
-              <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
-                Start Teaching Dashboard
+              <Button size="lg" variant="secondary" className="text-lg px-6 py-3 w-full">
+                <Users className="h-5 w-5 mr-2" />
+                Teachers
               </Button>
             </Link>
             <Link to="/admin">
-              <Button size="lg" variant="outline" className="text-lg px-8 py-3 bg-white/10 border-white/20 text-white hover:bg-white/20">
-                Administrator Portal
+              <Button size="lg" variant="outline" className="text-lg px-6 py-3 bg-white/10 border-white/20 text-white hover:bg-white/20 w-full">
+                <GraduationCap className="h-5 w-5 mr-2" />
+                Administrators
+              </Button>
+            </Link>
+            <Link to="/student">
+              <Button size="lg" variant="outline" className="text-lg px-6 py-3 bg-white/10 border-white/20 text-white hover:bg-white/20 w-full">
+                <BookOpen className="h-5 w-5 mr-2" />
+                Students
+              </Button>
+            </Link>
+            <Link to="/government">
+              <Button size="lg" variant="outline" className="text-lg px-6 py-3 bg-white/10 border-white/20 text-white hover:bg-white/20 w-full">
+                <Building className="h-5 w-5 mr-2" />
+                Government
               </Button>
             </Link>
           </div>
@@ -205,13 +225,34 @@ const Index = () => {
             Ready to Transform Your School?
           </h2>
           <p className="text-lg text-accent-foreground/90 mb-8 max-w-2xl mx-auto">
-            Join the digital revolution in rural education. Start with SmartAttend today.
+            Choose your portal to access SmartAttend's powerful attendance management system.
           </p>
-          <Link to="/dashboard">
-            <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
-              Get Started Now
-            </Button>
-          </Link>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 justify-center max-w-3xl mx-auto">
+            <Link to="/dashboard">
+              <Button size="lg" variant="secondary" className="text-lg px-6 py-3 w-full">
+                <Users className="h-5 w-5 mr-2" />
+                Teachers
+              </Button>
+            </Link>
+            <Link to="/admin">
+              <Button size="lg" variant="secondary" className="text-lg px-6 py-3 w-full">
+                <GraduationCap className="h-5 w-5 mr-2" />
+                Administrators
+              </Button>
+            </Link>
+            <Link to="/student">
+              <Button size="lg" variant="secondary" className="text-lg px-6 py-3 w-full">
+                <BookOpen className="h-5 w-5 mr-2" />
+                Students
+              </Button>
+            </Link>
+            <Link to="/government">
+              <Button size="lg" variant="secondary" className="text-lg px-6 py-3 w-full">
+                <Building className="h-5 w-5 mr-2" />
+                Government
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
